@@ -1,0 +1,43 @@
+﻿@model List<UserDetail>
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<h2>User Details for @ViewBag.UserName</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>UserName</th>
+            <th>Role</th>
+            <th>LastLogin</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Department</th>
+            <th>DOJ</th>
+            <th>MgrId</th>
+            <th>Seniority</th>
+            <th>EmpCode</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserId</td>
+                <td>@user.UserName</td>
+                <td>@user.Role</td>
+                <td>@user.LastLogin</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.Department</td>
+                <td>@user.DOJ</td>
+                <td>@user.MgrId</td>
+                <td>@user.Seniority</td>
+                <td>@user.EmpCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
